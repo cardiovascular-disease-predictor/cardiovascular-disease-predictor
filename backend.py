@@ -30,7 +30,7 @@ def heart_page():
         slope = request.form['slope']
         ca = request.form['ca']
         thal = request.form['thal']
-        heart_dataset = pd.read_csv('D:\Medical-Diagnosis-Web-App-\Medical-Diagnosis-Web-App-\heart.csv')
+        heart_dataset = pd.read_csv('heart.csv')
         X = heart_dataset.drop(columns='target', axis=1)
         Y = heart_dataset['target']
         X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.4, random_state=42)
